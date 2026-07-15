@@ -6,21 +6,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
-  --ink: #E7EAEE;
-  --ink-soft: #A7B0BC;
-  --paper: #0B0D11;
-  --paper-raised: #14171D;
-  --white: #1C212A;
-  --signal: #E7A458;
-  --signal-soft: #4A3A24;
-  --steel: #8FA6BE;
-  --steel-soft: #7E96AE;
-  --resolved: #57B79B;
-  --line: rgba(231, 234, 238, 0.09);
-  --line-strong: rgba(231, 234, 238, 0.20);
+  --ink: #EAF0F7;
+  --ink-soft: #A9B7C8;
+  --paper: #060A10;
+  --paper-raised: #0F151E;
+  --white: #182231;
+  --signal: #3BA7FF;
+  --signal-soft: #12283F;
+  --steel: #6F8CB0;
+  --steel-soft: #8AA6C6;
+  --resolved: #4FD1C5;
+  --line: rgba(180, 205, 235, 0.09);
+  --line-strong: rgba(180, 205, 235, 0.20);
 
-  --panel-bg: #0A0C10;
-  --panel-text: #ECEEEC;
+  --panel-bg: #05070B;
+  --panel-text: #ECF2F8;
 
   --display: 'Space Grotesk', sans-serif;
   --body: 'Source Serif 4', serif;
@@ -99,7 +99,7 @@ p:last-child { margin-bottom: 0; }
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgba(11, 13, 17, 0.86);
+  background: rgba(6, 10, 16, 0.86);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -235,6 +235,54 @@ p:last-child { margin-bottom: 0; }
 
 .hero h1 .accent { color: var(--signal); }
 
+.hero-identity {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 18px 0 22px;
+}
+
+.hero-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--signal);
+  flex-shrink: 0;
+}
+
+.hero-name {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.hero-role {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--steel-soft);
+  margin-top: 2px;
+}
+
+.hero-quicklinks {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.hero-quicklinks a {
+  font-family: var(--mono);
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--steel-soft);
+  transition: color 0.15s;
+}
+.hero-quicklinks a:hover { color: var(--signal); }
+
 .hero-sub {
   font-family: var(--body);
   font-size: 19px;
@@ -349,7 +397,7 @@ section.block + section.block { border-top: 1px solid var(--line); }
 .diagram-figure img {
   width: 100%;
   border: 1px solid var(--line-strong);
-  background: #0A0C10;
+  background: #05070B;
 }
 
 .diagram-figure .fig-cap {
