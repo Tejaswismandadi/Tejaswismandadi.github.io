@@ -6,18 +6,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
-  --ink: #14181F;
-  --ink-soft: #2A303B;
-  --paper: #EDEEEC;
-  --paper-raised: #F7F7F5;
-  --white: #FFFFFF;
-  --signal: #C17F3A;
-  --signal-soft: #E8CBA6;
-  --steel: #2B4356;
-  --steel-soft: #5C7A8C;
-  --resolved: #4B7B6B;
-  --line: rgba(20, 24, 31, 0.12);
-  --line-strong: rgba(20, 24, 31, 0.28);
+  --ink: #E7EAEE;
+  --ink-soft: #A7B0BC;
+  --paper: #0B0D11;
+  --paper-raised: #14171D;
+  --white: #1C212A;
+  --signal: #E7A458;
+  --signal-soft: #4A3A24;
+  --steel: #8FA6BE;
+  --steel-soft: #7E96AE;
+  --resolved: #57B79B;
+  --line: rgba(231, 234, 238, 0.09);
+  --line-strong: rgba(231, 234, 238, 0.20);
+
+  --panel-bg: #0A0C10;
+  --panel-text: #ECEEEC;
 
   --display: 'Space Grotesk', sans-serif;
   --body: 'Source Serif 4', serif;
@@ -96,7 +99,7 @@ p:last-child { margin-bottom: 0; }
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgba(237, 238, 236, 0.92);
+  background: rgba(11, 13, 17, 0.86);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -172,7 +175,7 @@ p:last-child { margin-bottom: 0; }
   background: var(--ink);
   color: var(--paper);
 }
-.btn.primary:hover { background: var(--signal); border-color: var(--signal); color: var(--ink); }
+.btn.primary:hover { background: var(--signal); border-color: var(--signal); color: #14181F; }
 
 .text-link {
   font-family: var(--mono);
@@ -245,15 +248,16 @@ p:last-child { margin-bottom: 0; }
 /* ---------- Convergence diagram (signature element) ---------- */
 
 .diagram-frame {
-  background: var(--ink);
+  background: var(--panel-bg);
   padding: 28px;
   position: relative;
+  border: 1px solid var(--line);
 }
 
 .diagram-frame .cap {
   font-family: var(--mono);
   font-size: 11px;
-  color: var(--paper);
+  color: var(--panel-text);
   opacity: 0.55;
   letter-spacing: 0.08em;
   margin-top: 14px;
@@ -335,6 +339,132 @@ section.block + section.block { border-top: 1px solid var(--line); }
   transition: color 0.15s, transform 0.15s;
 }
 .case-card:hover .go { color: var(--signal); transform: translate(3px,-3px); }
+
+/* ---------- Process diagram figures ---------- */
+
+.diagram-figure {
+  margin: 20px 0 30px;
+}
+
+.diagram-figure img {
+  width: 100%;
+  border: 1px solid var(--line-strong);
+  background: #0A0C10;
+}
+
+.diagram-figure .fig-cap {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--steel);
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.diagram-figure .fig-cap .fig-tag {
+  color: var(--signal);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- Methodology phase grid ---------- */
+
+.phase-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line-strong);
+  border: 1px solid var(--line-strong);
+  margin-top: 10px;
+}
+@media (max-width: 860px) { .phase-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .phase-grid { grid-template-columns: 1fr; } }
+
+.phase-cell {
+  background: var(--paper-raised);
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.phase-cell .phase-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--signal);
+  letter-spacing: 0.08em;
+}
+
+.phase-cell h4 {
+  font-family: var(--display);
+  font-size: 17px;
+  margin: 0;
+}
+
+.phase-cell ul {
+  margin: 4px 0 0 0;
+  padding-left: 16px;
+  font-size: 14px;
+  color: var(--ink-soft);
+  font-family: var(--body);
+}
+.phase-cell li { margin-bottom: 8px; }
+.phase-cell li:last-child { margin-bottom: 0; }
+
+.role-tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 1px 6px;
+  margin-left: 6px;
+  border: 1px solid var(--line-strong);
+  color: var(--steel);
+  vertical-align: middle;
+}
+.role-tag.mine { border-color: var(--signal); color: var(--signal); }
+
+/* ---------- About strip (photo) ---------- */
+
+.about-strip {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 26px;
+  align-items: center;
+  padding: 30px 32px;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+}
+
+.about-strip .photo {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--line-strong);
+}
+
+.about-strip .about-text p {
+  font-size: 15.5px;
+  color: var(--ink-soft);
+  max-width: 62ch;
+}
+
+.about-strip .about-text .name-line {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+@media (max-width: 560px) {
+  .about-strip { grid-template-columns: 1fr; text-align: left; }
+  .about-strip .photo { width: 76px; height: 76px; }
+}
 
 /* ---------- Stat strip ---------- */
 
