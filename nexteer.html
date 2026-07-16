@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexteer Automotive — Case Study | Tejaswi Sreerama</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="nav-mark"><span class="diamond"></span>Tejaswi Sreerama</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="nexteer.html" class="active">Nexteer</a>
+      <a href="kearney.html">Kearney</a>
+      <a href="agna.html">AGNA</a>
+      <a href="ism-competition.html">ISM Competition</a>
+    </div>
+  </div>
+</nav>
+
+<header class="case-hero">
+  <div class="wrap">
+    <div class="eyebrow">Case Study · Ross Consulting Studio Engagement</div>
+    <h1>A dashboard with 100+ red flags — and no way to know which one mattered.</h1>
+    <p class="dek">Nexteer Automotive's supplier risk system had five data sources, a weighted score, and no way to tell a team where to look first. Designing the framework that fixed that meant finding two blind spots the system's own architecture guaranteed it would miss.</p>
+    <div class="case-meta">
+      <div><span class="m-label">Role</span><span class="m-val">Team Lead</span></div>
+      <div><span class="m-label">Duration</span><span class="m-val">January – April 2026</span></div>
+      <div><span class="m-label">Client</span><span class="m-val">Nexteer Automotive</span></div>
+      <div><span class="m-label">Frameworks</span><span class="m-val">TTR/TTS · REI · P1/P2/P3</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="block">
+  <div class="wrap">
+
+    <div class="narrative">
+      <div class="n-label">01 — Situation</div>
+      <div class="n-body">
+        <h3>Five sources, one blended score, no way to prioritize.</h3>
+        <p>Nexteer's supplier risk visibility ran through five siloed tools — ELM Risk Analytics for financial health, a Supplier Balanced Scorecard for quality and delivery, SPHERA for operational events, SAYARI for ESG, and internal emissions tracking — rolled into one Power BI dashboard through a fixed formula weighted heavily toward financial risk. Intellex handled downstream workflow and escalation.</p>
+        <p>Mapping that landscape surfaced two structural gaps. ELM's financial scoring depended on suppliers self-reporting data — a documented coverage blind spot for private suppliers with no public financial disclosure, and exactly the suppliers driving some of the highest-impact disruptions. And the dashboard was surfacing over 100 suppliers flagged red with no relative prioritization, so teams had no way to know which risks actually warranted immediate action.</p>
+      </div>
+    </div>
+
+    <div class="narrative">
+      <div class="n-label">02 — Approach</div>
+      <div class="n-body">
+        <h3>Trace the disruption path before scoring anything.</h3>
+        <p>Before building a framework, I traced how supplier disruptions actually unfolded at Nexteer. An ownership or leadership change at a supplier was consistently the earliest visible structural trigger — followed by organizational instability, then operational decline in quality and delivery, and finally the financial distress that would eventually trip ELM's red flag, by which point the disruption was already well underway.</p>
+        <p>That traced two distinct failure patterns: cases where internal warning signs existed but weren't connected or escalated in time, and cases where no internal signal existed at all because the only real change was external and invisible — a private supplier's ownership change, for instance.</p>
+        <div class="callout">External signals require supplier self-disclosure and are especially unreliable for private suppliers. Internal signals — engineering delays, quality defects, late PPAP — already existed inside Nexteer's own teams, but stayed siloed and disconnected from supplier risk scoring.</div>
+        <p>I recommended Nexteer formalize its own internal engineering and quality observations as an early-warning input for private-supplier risk, rather than continuing to depend on external disclosure that private suppliers often don't provide.</p>
+      </div>
+    </div>
+
+    <div class="narrative">
+      <div class="n-label">03 — Framework</div>
+      <div class="n-body">
+        <h3>REI: prioritization, convergence detection, and escalation.</h3>
+        <p><b>Prioritization.</b> Built a P1/P2/P3 tiering model using Simchi-Levi's Time-to-Recover (TTR) and Time-to-Survive (TTS) methodology, scoring suppliers by business impact and disruption probability — single-source dependency, revenue impact, lead time, technical complexity. This converted 100+ undifferentiated red flags into a ranked, actionable priority order.</p>
+        <p><b>Hidden concentration risk.</b> Surfaced what I call the <i>diamond problem</i> — cases where a single sub-tier supplier feeds multiple independent Tier 1 relationships, creating concentration risk invisible to any of the five existing tools, since each scored suppliers individually rather than for network convergence.</p>
+        <p><b>Escalation.</b> Designed a 24-hour escalation protocol giving high-risk signals a defined response window, replacing ad hoc handling with a consistent, repeatable playbook.</p>
+        <div class="tag-row">
+          <span class="tag-chip">TTR / TTS</span>
+          <span class="tag-chip">P1 / P2 / P3 tiering</span>
+          <span class="tag-chip">Diamond node detection</span>
+          <span class="tag-chip">24-hr escalation protocol</span>
+          <span class="tag-chip">Power BI + Everstream</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="narrative">
+      <div class="n-label">04 — Outcome</div>
+      <div class="n-body">
+        <h3>Presented to leadership as a decision-support layer.</h3>
+        <p>Presented the REI framework — the P1/P2/P3 prioritization model and the recommendation to formalize internal team signals for private-supplier risk — to Nexteer leadership in a structured executive format, translating supplier-level risk data into program-level decision support.</p>
+        <div class="honesty-note">
+          <b>Scope note:</b> this was a Ross Consulting Studio engagement — a bounded academic consulting project, not an operational role. Every claim above reflects design and recommendation work delivered to Nexteer's team, not multi-month execution or standing governance ownership. The same TTR/TTS and P1/P2/P3 logic was later built into a live, interactive form in <a href="agna.html" class="text-link">AGNA</a>.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="case-switch">
+    <a href="index.html"><span class="dir">← Back to</span>Case Study Index</a>
+    <a href="kearney.html"><span class="dir">Next case study →</span>Kearney — CBAM Compliance</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="meta">Novi, MI · tejaswismandadi@gmail.com · linkedin.com/in/tejaswisreerama</div>
+  </div>
+</footer>
+
+</body>
+</html>
